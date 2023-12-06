@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+      var d = new Date();
+      document.getElementById("demo").innerHTML = d;
+    </script>
+    <script>
+      var meyve = ["muz", "elma"];
+      meyve.push("armut");
+      meyve[meyve.length] = "limon";
+      document.getElementById("demo2").innerHTML = meyve;
+    </script>
+    <script>
+      var x = Boolean(10 > 8);
+      document.getElementById("demo3").innerHTML = x;
+    </script>
+    <script>
+      var mesaj;
+      var saat = new Date().getHours();
+      if (saat < 18) {
+        mesaj = "İyi Günler...";
+      } else {
+        mesaj = "İyi Akşamlar...";
+      }
+      switch (new Date().getDay()) {
+        case 0:
+          gun = "Pazar";
+          break;
+        case 1:
+          gun = "Pazartesi";
+          break;
+        case 2:
+          gun = "Salı";
+          break;
+        case 3:
+          gun = "Çarşamba";
+          break;
+        case 4:
+          gun = "Perşembe";
+          break;
+        case 5:
+          gun = "Cuma";
+          break;
+        case 6:
+          gun = "Cumartesi";
+          break;
+        default:
+          alert("!!!");
+          break;
+      }
+      document.getElementById("demo4").innerHTML = mesaj + gun;
+    </script>
+    <script>
+      var metin =
+        '{"calisan":[' +
+        '{"ad" : "Bedirhan","soyad":"Can"},' +
+        '{"ad" : "Bedirhan","soyad":"Can"},' +
+        '{"ad" : "Bedirhan","soyad":"Can"}]}';
+      obj = JSON.parse(metin);
+      document.getElementById("demo5").innerHTML =
+        obj.calisan[1].ad + " " + obj.calisan[1].soyad;
+    </script>
+  </body>
+</html>

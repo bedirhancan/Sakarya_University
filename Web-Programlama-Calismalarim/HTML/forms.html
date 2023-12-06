@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms</title>
+  </head>
+  <body>
+    <form action="register.php">
+      <div>
+        <label for="name">Ad</label>
+        <input type="text" id="name" />
+      </div>
+      <div>
+        <label for="surname">Soyad</label>
+        <input type="text" id="surname" />
+      </div>
+      <div>
+        <label for="tckn">TCKN</label>
+        <input type="text" id="tckn" pattern="[0-9]{11}" />
+      </div>
+      <div>
+        <label for="parola">Parola</label>
+        <input type="password" id="parola" />
+      </div>
+      <div>
+        <input type="file" name="dosya" multiple />
+      </div>
+      <div>
+        <label for="intro">Kendini Anlat</label>
+        <textarea id="intro" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <p>En sevdiğin programlama dili</p>
+        <input type="radio" id="c#" name="programlama" />
+        <label for="c#">C#</label>
+        <input type="radio" id="c++" name="programlama" />
+        <label for="c++">C++</label>
+        <input type="radio" id="java" name="programlama" />
+        <label for="java">Java</label>
+      </div>
+      <div>
+        <p>En sevdiğin programlama dili</p>
+        <input type="checkbox" id="c#2" />
+        <label for="c#2">C#</label>
+        <input type="checkbox" id="c++2" />
+        <label for="c++2">C++</label>
+        <input type="checkbox" id="java2" />
+        <label for="java2">Java</label>
+      </div>
+      <div>
+        <label for="cities">Şehirler</label>
+        <select id="cities">
+          <option value="31">Hatay</option>
+          <option value="27">Gaziantep</option>
+        </select>
+      </div>
+      <div>
+        <label for="eposta">E-mail</label>
+        <input type="email" id="eposta" />
+      </div>
+      <div>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" />
+      </div>
+
+      <button type="submit">Kaydet</button>
+      <button type="reset">Temizle</button>
+    </form>
+  </body>
+</html>
